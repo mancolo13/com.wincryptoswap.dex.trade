@@ -44,7 +44,7 @@ class _Tab1ScreenState extends State<Tab1Screen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Swap Health', style: const TextStyle(fontSize: 16, color: Colors.white70)),
+                    Text('Liquidity Yield', style: const TextStyle(fontSize: 16, color: Colors.white70)),
                     Switch(
                       value: _active,
                       activeThumbColor: AppTheme.primaryColor,
@@ -53,10 +53,10 @@ class _Tab1ScreenState extends State<Tab1Screen> {
                   ],
                 ),
                 const SizedBox(height: 12),
-                Text('$_score%', style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold)),
+                Text('+28.4%', style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 LinearProgressIndicator(
-                  value: 0.92,
+                  value: 0.82,
                   backgroundColor: Colors.white12,
                   color: AppTheme.primaryColor,
                   minHeight: 8,
@@ -68,9 +68,9 @@ class _Tab1ScreenState extends State<Tab1Screen> {
           const SizedBox(height: 16),
           Row(
             children: [
-              Expanded(child: _buildMetric('Total', '1,840', Icons.analytics)),
+              Expanded(child: _buildMetric('24h Volume', '184,200 USD', Icons.analytics)),
               const SizedBox(width: 12),
-              Expanded(child: _buildMetric('Active', '99.2%', Icons.speed)),
+              Expanded(child: _buildMetric('Pools', '14', Icons.speed)),
             ],
           ),
           const SizedBox(height: 16),
@@ -82,7 +82,7 @@ class _Tab1ScreenState extends State<Tab1Screen> {
                 backgroundColor: AppTheme.primaryColor.withValues(alpha: 0.2),
                 child: Icon(Icons.check, color: AppTheme.primaryColor),
               ),
-              title: Text('Swap Priority ${i + 1}'),
+              title: Text('DEX Transaction #${i + 1}'),
               subtitle: Text('Progress: Normal • Level ${i + 1}'),
               trailing: const Icon(Icons.chevron_right, color: Colors.white38),
               onTap: () => setState(() => _score = (_score + 1) % 100),

@@ -40,7 +40,7 @@ class _Tab3ScreenState extends State<Tab3Screen> {
                   ],
                 ),
                 const Divider(height: 24),
-                const Text('Threshold Slider', style: TextStyle(fontSize: 15)),
+                const Text('Max Slippage Tolerance', style: const TextStyle(fontSize: 15)),
                 Slider(
                   value: _val,
                   activeColor: AppTheme.secondaryColor,
@@ -57,7 +57,7 @@ class _Tab3ScreenState extends State<Tab3Screen> {
               children: [
                 ListTile(
                   leading: const Icon(Icons.settings, color: AppTheme.secondaryColor),
-                  title: const Text('Detailed Calibration'),
+                  title: const Text('MEV Protection Bot'),
                   subtitle: const Text('Adaptive settings presets'),
                   trailing: const Icon(Icons.arrow_forward_ios, size: 14),
                   onTap: () => RoutingService.openRegistrationUrl(),
